@@ -1,0 +1,90 @@
+[
+  {
+    "_id": "6748994ee167edebafa4c63b",
+    "Restaurant_Name": "Barkaas",
+    "Menu": "Chicken Burger",
+    "Orders": 1,
+    "Billing": "Prepaid",
+    "TypeOfPayment": "Cash",
+    "NumberOfItems": 2,
+    "Rating": 4,
+    "Reviews": "Good"
+  },
+  {
+    "_id": "67489a7fe167edebafa4c63d",
+    "Restaurant_Name": "KFC",
+    "Menu": "Muffins",
+    "Orders": "4",
+    "Billing": "Prepaid",
+    "TypeOfPayment": "UPI",
+    "NumberOfItems": 3,
+    "Rating": "3",
+    "Reviews": "Average"
+  },
+  {
+    "_id": "67489b35e167edebafa4c63e",
+    "Restaurant_Name": "Dominos",
+    "Menu": "Pizza",
+    "Orders": "Chicken Pizza",
+    "Billing": "Cash",
+    "TypeOfPayment": "Cash",
+    "NumberOfItems": 1,
+    "Rating": 1,
+    "Reviews": "Excellent"
+  },
+  {
+    "_id": "67489bd8e167edebafa4c63f",
+    "Restaurant_Name": "Mcd",
+    "Menu": "Chicken Wings",
+    "Orders": 2,
+    "Billing": "Cash",
+    "TypeOfPayment": "Cash",
+    "NumberOfItems": 4,
+    "Rating": 3,
+    "Reviews": "Not bad"
+  },
+  {
+    "_id": "67489cfe9ac2a350dcec3903",
+    "Restaurant_Name": "Barosa",
+    "Menu": "Biryani",
+    "Orders": 2,
+    "Billing": "Prepaid",
+    "TypeOfPayment": "Card",
+    "NumberOfItems": 4,
+    "Rating": 5,
+    "Reviews": "Good"
+  },
+  {
+    "_id": "67489de89ac2a350dcec3904",
+    "Restaurant_Name": "Star Of India",
+    "Menu": "Chilli Chicken",
+    "Orders": 1,
+    "Billing": "Prepaid",
+    "TypeOfPayment": "Cash",
+    "NumberOfItems": 4,
+    "Reviews": "Excellent",
+    "Rating": 4
+  },
+  {
+    "_id": "67489ed79ac2a350dcec3905",
+    "Restaurant_Name": "Spice Venu",
+    "Menu": "Butter Chicken",
+    "Orders": 4,
+    "Billing": "Cash",
+    "TypeOfPayment": "Cash",
+    "NumberOfItems": 5,
+    "Rating": 3,
+    "Reviews": "Good"
+  },
+  {
+    "_id": "6748a04a9ac2a350dcec3906",
+    "Restaurant_Name": "Coromondal",
+    "Menu": "Garlic Naan",
+    "Orders": 2,
+    "TypeOfPayment": "Cash",
+    "NumberOfItems": 3,
+    "Rating": 2,
+    "Reviews": "Good",
+    "Billing": "Prepaid"
+  }
+]

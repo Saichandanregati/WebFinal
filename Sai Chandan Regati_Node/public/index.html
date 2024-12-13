@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        :root {
+            --nav-color: #f4b74e;
+            --HOME-color: #f7d344;
+            --SKILLS-color: #f49b48;
+            --EDUCATION-color: #f1d172;
+            --PROJECTS-color: hsl(27, 59%, 59%);
+            --EXPERIENCE-color: #fd7200;
+            --INTERESTS-color: #f49a5f;
+            --CONTACT-details-color: rgb(238, 122, 80);
+            --footer-color: #fa5a5a;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            width: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .container0 {
+            display: grid;
+            height: auto;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto auto auto auto auto auto;
+            grid-template-areas:
+                "nav nav nav nav"
+                "HOME HOME SKILLS SKILLS"
+                "EDUCATION EDUCATION EDUCATION EDUCATION"
+                "PROJECTS PROJECTS EXPERIENCE EXPERIENCE"
+                "INTERESTS INTERESTS CONTACT-details CONTACT-details"
+                "footer footer footer footer";
+            gap: 0.5em;
+            padding: 0.5%;
+        }
+
+        header {
+            grid-area: nav;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            background-color: var(--nav-color);
+            padding: 10px;
+            text-align: center;
+        }
+
+        header a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 17px;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        header a:hover {
+            background-color: #ffc803;
+            border-radius: 5px;
+        }
+
+        header .icon {
+            display: none;
+        }
+
+        #HOME {
+            grid-area: HOME;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--HOME-color);
+            padding: 20px;
+        }
+
+        #HOME img {
+            max-width: 13rem;
+            height: 13rem;
+            border-radius: 10%;
+        }
+
+        #SKILLS {
+            grid-area: SKILLS;
+            background-color: var(--SKILLS-color);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .SKILLS p {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        #EDUCATION {
+            grid-area: EDUCATION;
+            background-color: var(--EDUCATION-color);
+            padding: 20px;
+        }
+
+        #education_list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .education {
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        .education img {
+            width: 100px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        #PROJECTS {
+            grid-area: PROJECTS;
+            background-color: var(--PROJECTS-color);
+            padding: 20px;
+        }
+
+        #project_list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: space-around;
+        }
+
+        .PROJECT {
+            width: 300px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .PROJECT img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        #EXPERIENCE {
+            grid-area: EXPERIENCE;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--EXPERIENCE-color);
+            padding: 20px;
+            text-align: center;
+        }
+
+        #experience_list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .experience {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 300px;
+        }
+
+        .experience img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 5px;
+        }
+		#EXPERIENCE img {
+         width: 200px;
+          height: 150px; 
+         object-fit: cover; 
+         border-radius: 5px; 
+}
+
+        #INTERESTS {
+            grid-area: INTERESTS;
+            background-color: var(--INTERESTS-color);
+            padding: 20px;
+            text-align: center;
+        }
+
+        #CONTACT-details {
+            grid-area: CONTACT-details;
+            background-color: var(--CONTACT-details-color);
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: var(--footer-color);
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        footer span {
+            display: block;
+            margin: 10px 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Queries for Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .container0 {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "nav"
+                    "HOME"
+                    "SKILLS"
+                    "EDUCATION"
+                    "PROJECTS"
+                    "EXPERIENCE"
+                    "INTERESTS"
+                    "CONTACT-details"
+                    "footer";
+            }
+
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header .icon {
+                display: block;
+            }
+
+            #education_list,
+            #project_list {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container0">
+        <header class="header" id="header1">
+            <a href="#HOME">HOME</a>
+            <a href="#SKILLS">SKILLS</a>
+            <a href="#EDUCATION">EDUCATION</a>
+            <a href="#PROJECTS">PROJECTS</a>
+            <a href="#EXPERIENCE">EXPERIENCE</a>
+            <a href="#INTERESTS">INTERESTS</a>
+            <a href="#CONTACT-details">CONTACT-INFO</a>
+            <a href="javascript:void(0);" class="icon" onclick="myscriptFunction()">
+                <i>Sai Chandan Regati</i>
+            </a>
+        </header>
+
+        <section id="HOME" class="HOME-SKILLS">
+            <div class="HOME">
+                <img src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?semt=ais_hybrid" alt="Sai Chandan Regati">
+                <h2>Sai Chandan Regati</h2>
+                <p>Student</p>
+            </div>
+        </section>
+        
+        <section id="SKILLS">
+            <h2 class="title_heading">Skills:</h2>
+            <div class="SKILLS">
+                <p><span class="label">Languages:</span> Python, Java, C/C++</p>
+                <p><span class="label">Softwares:</span> Auto-CAD, GIS, Rivet Architect, Staad-Pro</p>
+                <p><span class="label">Certifications:</span> Coursera Python, BEC-NPTEL, Civil Engineering Workshops</p>
+                <p><span class="label">Cloud Platform:</span> SAP-BTP Platform</p>
+                <p><span class="label">Microsoft Tools:</span> Word, Excel, PowerPoint</p>
+            </div>
+        </section>
+
+        <section id="EDUCATION">
+            <h2 class="title_heading">EDUCATION</h2>
+            <div id="education_list">
+                <div class="education">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBG33GecVZGAiXu4Obp2Ff34ozLWrQyux7DQ&s" alt="University of New Haven">
+                    <h4>GRADUATION</h4>
+                    <p>UNIVERSITY OF NEW HAVEN</p>
+                    <p>West Haven, CT, US</p>
+                </div>
+                <div class="education">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg2b6a9n9FFEIv6L892hLwrWvLyzRUk7QcZg&s" alt="Vardhaman College of Engineering">
+                    <h4>UNDER GRADUATION</h4>
+                    <p>VARDHAMAN COLLEGE OF ENGINEERING</p>
+                    <p>Hyderabad, TG, IN</p>
+                </div>
+                <div class="education">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgvSzpgUbTAq4UFQ60b7eIqvc2b6gBV-55gnGYC8Hu2nvhOD_rc-Zu2IV9-WxuhSZe7G8&usqp=CAU" alt="Narayana College">
+                    <h4>INTERMEDIATE</h4>
+                    <p>NARAYANA COLLEGE</p>
+                    <p>Hyderabad, TG, IN</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="PROJECTS">
+            <h2 class="title_heading">PROJECTS</h2>
+            <div id="project_list">
+                <div class="PROJECT">
+                    <img src="https://img.freepik.com/free-photo/document-marketing-strategy-business-concept_53876-132231.jpg" alt="Project Image">
+                    <p>Feature-based Reinforcement learning for the 4x4 Rubik's cube using AI</p>
+                </div>
+                <div class="PROJECT">
+                    <img src="https://img.freepik.com/free-photo/document-marketing-strategy-business-concept_53876-132231.jpg" alt="Project Image">
+                    <p>Quantification of design charts for bamboo reinforced columns.</p>
+                </div>
+                <div class="PROJECT">
+                    <img src="https://img.freepik.com/free-photo/document-marketing-strategy-business-concept_53876-132231.jpg" alt="Project Image">
+                    <p>Analysis and design of fiber reinforced concrete.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="EXPERIENCE">
+            <h2 class="title_heading">EXPERIENCE</h2>
+            <div id="experience_list" class="experience">
+                <img src="https://st2.depositphotos.com/5898448/8602/i/450/depositphotos_86020794-stock-photo-businessman-is-presenting-text-experience.jpg" alt="Experience Image">
+                <div>
+                    <h4>PROCESS EXECUTIVE</h4>
+                    <p>NVIDIA GRAPHICS PRIVATE LIMITED</p>
+                </div>
+            </div>
+            <div class="EXPERIENCE">
+                <img src="https://st2.depositphotos.com/5898448/8602/i/450/depositphotos_86020794-stock-photo-businessman-is-presenting-text-experience.jpg" alt="Experience Image">
+                <div>
+                    <h4>DATA ANALYST</h4>
+                    <p>RANDSTAD TECHNOLOGIES</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="INTERESTS">
+            <h2 class="container2">INTERESTS</h2>
+            <div class="INTERESTS">
+                <p>Playing Cricket, Football. Dancing and Pencil Art.</p>
+            </div>
+        </section>
+
+        <section id="CONTACT-details">
+            <h2 class="CONTACT-details">CONTACT DETAILS</h2>
+            <div>
+                <p>Email: Srega4@unh.newhaven.edu</p>
+                <p>Mobile: +1-475-308-5372</p>
+                <p>Student at New Haven University</p>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <span class="one">
+                <i class="fa fa-linkedin-square" style="color: #0077B7; font-size: 20px;" id="info"></i>
+                <a href="https://www.linkedin.com/in/saichandan-regati">LinkedIn</a>
+            </span>
+            <span class="two">
+                <i class="fa fa-github" style="font-size: 20px;" id="info"></i>
+                <a href="https://github.com/Saichandanregati">GitHub</a>
+            </span>
+            <span class="three">
+                <i class="fa fa-facebook" style="font-size: 20px;" id="info"></i>
+                <a href="https://facebook.com/saichandan-regati">Facebook</a>
+            </span>
+        </footer>
+    </div>
+
+    <script>
+        function myscriptFunction() {
+            var x = document.getElementById("header1");
+            if (x.className === "header") {
+                x.className += " responsive";
+            } else {
+                x.className = "header";
+            }
+        }
+    </script>
+</body>
+</html>
